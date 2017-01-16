@@ -4,7 +4,11 @@ import (
 	"fmt"
 )
 
+/*
+好神奇的iota
+ */
 func Iota() {
+	fmt.Println("-----------iota------------")
 	const (
 		a = iota   //0
 		b          //1
@@ -20,6 +24,7 @@ func Iota() {
 }
 
 func Function(a, b int) int {
+	fmt.Println("-----------func------------")
 	if (a > b) {
 		return a;
 	} else {
@@ -28,11 +33,17 @@ func Function(a, b int) int {
 
 }
 
+/*
+多返回值
+ */
 func Result2(a, b int) (int, int) {
 	return a, b;
 }
 
-func FunctionVariable() func(int,int) int{
+/*
+有闭包功能
+ */
+func FunctionVariable() func(int, int) int {
 	mult := 3
 	max := func(a, b int) int {
 		a *= mult
@@ -44,4 +55,33 @@ func FunctionVariable() func(int,int) int{
 		}
 	}
 	return max;
+}
+
+func Array() {
+	fmt.Println("-----------array------------")
+	arr := []int{1, 2, 3}
+	for i := 0; i < ArrayParam(arr); i++ {
+		arr[i] = arr[i] * 2
+	}
+	fmt.Println(arr)
+}
+/*
+好像不需要传递size
+*/
+func ArrayParam(arr[]int) int {
+	return len(arr)
+}
+
+/*
+指针
+ */
+func Point(){
+	fmt.Println("-----------point------------")
+	var ip *int;
+	i:=10;
+	fmt.Println("point is nil:",ip==nil)
+	ip=&i
+	fmt.Println(&i)
+	fmt.Println(ip)
+	fmt.Println(*ip)
 }

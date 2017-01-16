@@ -11,4 +11,6 @@ func main() {
 	fmt.Println(day1.Function(1, 2))
 	fmt.Println(day1.Result2(2, 3))
 	fmt.Println(day1.FunctionVariable()(1,2))
+	day1.Array()
+	day1.Point()
 }
