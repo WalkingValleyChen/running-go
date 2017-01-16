@@ -5,9 +5,10 @@ import (
 	"day1"
 )
 
-
 func main() {
-	fmt.Print("Hello world")
+	fmt.Println("Hello world")
 	day1.Iota();
-	fmt.Print(day1.Function(1,2))
+	fmt.Println(day1.Function(1, 2))
+	fmt.Println(day1.Result2(2, 3))
+	fmt.Println(day1.FunctionVariable()(1,2))
 }

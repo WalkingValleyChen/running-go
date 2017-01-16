@@ -27,3 +27,21 @@ func Function(a, b int) int {
 	}
 
 }
+
+func Result2(a, b int) (int, int) {
+	return a, b;
+}
+
+func FunctionVariable() func(int,int) int{
+	mult := 3
+	max := func(a, b int) int {
+		a *= mult
+		b *= mult
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
+	}
+	return max;
+}
